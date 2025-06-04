@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Formulario de contacto</title>
 </head>
@@ -19,7 +20,14 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./productos.html">Productos</a>
+                <ul>
+                <li><a href="./blazer.html">Blazer</a></li> 
+                <li><a href="./parkas.html">Parkas</a></li> 
+                <li><a href="./shores.html">Shores</a></li> 
+                <li><a href="./camperas.html">Camperas</a></li> 
+                </ul>
+                </li>
                 <li><a href="./ofertas.html">Ofertas</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./reseñas.html">Reseñas</a></li>
@@ -38,7 +46,6 @@
             <div class="formulario-contacto">
                 <h2>Formulario de contacto</h2>
         <form action="https://formspree.io/f/mblodanw" method="POST">
-            <br>
             <input type="texto" name="Nombre" id="nombre" placeholder="Ingrese su nombre:">
             <br>
             <input type="texto" name="Apellido" id="apellido" placeholder="Ingrese su apellido:">
@@ -54,15 +61,22 @@
         </div>
         <div class="ubicacion-contacto">Ubicacion de Contacto
         <h2>Ubicacion</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.7259902961483!2d-58.46969078292972!3d-34.63186718409279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc98f4fa864ab%3A0x8f73a6c29adc5646!2sARCURI!5e0!3m2!1ses!2sar!4v1748698665998!5m2!1ses!2sar" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.7259902961483!2d-58.46969078292972!3d-34.63186718409279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc98f4fa864ab%3A0x8f73a6c29adc5646!2sARCURI!5e0!3m2!1ses!2sar!4v1748698665998!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         </div>
     </main>
     <a href="./index.html">Volver</a>
-    <footer>
-        <hr>
-        <p>Desarrollador : Sebastian Saavedra - 2025 <a href="mailto:sebastiansaavedra710@gmail.com"> Mail: sebastiansaavedra710@gmail.com</a></p>
-        <hr>
+    <footer class="footer">
+        <div class="footer-container">
+        <div class="footer-redes">
+        <a href="https://www.instagram.com/instagram?igsh=NTc4MTIwNjQ2YQ"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1EcReBRHdC/"><i class="fa-brands fa-facebook"></i></a>      
+        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-info">
+            <p>Desarrollador : Sebastian Saavedra - 2025 <a href="mailto:sebastiansaavedra710@gmail.com"> Mail: sebastiansaavedra710@gmail.com</a></p>
+        </div>
+        </div>
     </footer>
     
 </body>

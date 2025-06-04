@@ -1,7 +1,6 @@
 body { 
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    color: gb(255, 0, 170);
     margin: 0px;
 }
 
@@ -17,46 +16,57 @@ body {
     flex-direction: column;
 
 }
-ul { 
-    list-style: none;
-    font-weight: bold;
-}
-li a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 500;
-}
 
 header{ 
     display: flex;
+    background-color: #ff99ff;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff99ff;
     position: sticky;
     top: 0;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     z-index: 20;
-}
-
-.anim {
-    transition: transform 2s ease-in-out;
-}
-
-.anim:hover{
-    transform: scale(1.5);
 }
 .nav {
     height: auto;
     margin-right: 3%;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 li {
     padding: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.nav ul li:hover  ul {
+    display: block;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.nav a:hover {
+    color: #23527c;
 }
 h1 {
     font-size: 50px;
@@ -66,19 +76,6 @@ p {
     color: deepskyblue;
 }    
 
-
-.boton-comprar {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.boton-comprar:hover {
-    background-color: #3e8e41;
-}
 .productos {
     display: flex;
     flex-wrap: wrap;
@@ -111,9 +108,17 @@ p {
     font-size: 14px;
     margin-bottom: 20px;
 }
-
-h1 {
-    color:hite;
+.boton-comprar {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.boton-comprar:hover {
+    background-color: #3e8e41;
 }
 
 .titulo1{
@@ -123,20 +128,6 @@ h1 {
     background-color: #ff99ff;
     flex-direction: column;
 
-}
-.card-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff99ff;
-    position: sticky;
-}
-.card1{
-    padding: 50px;
-
-}
-.card{
-    align-items: center;
 }
 .ofertas {
     display: flex;
@@ -180,26 +171,55 @@ h1 {
     margin-bottom: 20px;
 }
 
-.oferta button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.oferta button:hover {
-    background-color: #3e8e41;
-}
-
-footer{
-    background-color:#ff99ff;
+.footer{
+    background-color: #ff99ff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 5px;
+    padding: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-instagram {
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+.fa-facebook {
+    padding: 1.5rem;
+    font-size: 2rem;
+
+}
+.fa-whatsapp {
+    padding: 1.5rem;
+    font-size: 2rem;
+
+}
+.footer-info {
+    font-size: 20px;
+}
+
+/* Estilos para pantallas pequeñas(menos de 768px)*/
+
+@media (min-width: 768px) {
+    .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .footer-logo {
+    margin-bottom: 0;
+    }
+    .footer-redes {
+    margin-bottom: 0;
+    }
 }
 
 .reseñas {
@@ -246,7 +266,7 @@ footer{
 .contacto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -276,13 +296,9 @@ footer{
     flex-direction: column;
 }
 
-.formulario-contacto label {
-    margin-bottom: 10px;
-}
-
 .formulario-contacto input, .formulario-contacto textarea {
     padding: 10px;  
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     border: 1px solid #ccc;
 }
 
@@ -301,8 +317,7 @@ footer{
     border: none;
 }
 
-/* Media Queries */
-
+/* Estilos para pantallas pequeñas(menos de 768px)*/
 @media (max-width: 768px) {
     .contacto {
     grid-template-columns: 1fr;
@@ -313,7 +328,7 @@ footer{
     margin-bottom: 20px;
     }
 }
-
+/* Estilos para pantallas pequeñas(menos de 480px)*/
 @media (max-width: 480px) {
     .contacto {
     padding: 10px;
@@ -327,6 +342,4 @@ footer{
     height: 200px;
     }
 }
-
-
 
