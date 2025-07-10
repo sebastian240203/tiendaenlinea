@@ -5,8 +5,46 @@ body {
 }
 
 .imglogo {
-    position: sticky;
-    top: 9px;
+    width: 50%; /* Ajusta el tamaño del logo en pantallas grandes */
+    max-width: 300px; /* Establece un ancho máximo */
+    height: auto; /* Mantiene la proporción */
+}
+
+.titulo h1 {
+    font-size: 3rem; /* Tamaño base para pantallas grandes */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .imglogo {
+        width: 60%; /* Aumenta el tamaño del logo en pantallas pequeñas */
+        max-width: 150px; /* Ajusta el ancho máximo */
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem; /* Reduce el tamaño del título */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos del menú */
+    }
+
+    .nav-menu > li {
+        width: 100%; /* Cada elemento del menú ocupa el 100% del ancho */
+        text-align: center; /* Centra el texto en los elementos del menú */
+    }
+}
+
+@media (max-width: 480px) {
+    .imglogo {
+        width: 70%; /* Aumenta aún más el tamaño en pantallas muy pequeñas */
+        max-width: 120px; /* Ajusta el ancho máximo */
+    }
+
+    .titulo h1 {
+        font-size: 2rem; /* Reduce aún más el tamaño del título */
+    }
 }
 
 .titulo {
@@ -15,7 +53,7 @@ body {
     font-weight: 100;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 header { 
@@ -148,14 +186,7 @@ p {
     background-color: #3e8e41;
 }
 
-.titulo1 {
-    display: flex;
-    font-weight: 100;
-    align-items: center;
-    background-color: #ff99ff;
-    flex-direction: column;
 
-}
 .ofertas {
     display: flex;
     flex-wrap: wrap;
