@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/carrito-compras.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Tienda - En linea</title>
 </head>
@@ -20,18 +21,23 @@
         </div>
         <div class="nav">
         <nav>
-            <ul class="nav-menu">
-        <li><a href="./index.html">Inicio</a></li>
-        <li>
-            <a href="#" class="dropdown-toggle">Productos</a>
-            <ul class="dropdown">
-                <li><a href="./blazer.html">Blazer</a></li> 
-                <li><a href="./parkas.html">Parkas</a></li> 
-                <li><a href="./shores.html">Shores</a></li>
-                <li><a href="./camperas.html">Camperas</a></li> 
-            </ul>
-                </li>
-                <li><a href="./ofertas.html">Ofertas</a></li>
+                <ul class="nav-menu">
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li>
+                        <a href="#" id="icono-carrito" class="carrito-icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contador-carrito" class="contador-carrito">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Productos</a>
+                        <ul class="dropdown">
+                            <li><a href="./blazer.html">Blazer</a></li> 
+                            <li><a href="./parkas.html">Parkas</a></li> 
+                            <li><a href="./shores.html">Shores</a></li>
+                            <li><a href="./camperas.html">Camperas</a></li> 
+                        </ul>
+                    </li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./reseñas.html">Reseñas</a></li>
             </ul>
@@ -40,33 +46,48 @@
     </header>
 
     <main>
-        <div class="titulo1">
-            <h1>Nueva Coleccion</h1>
+        <div class="titulo">
+            <h1>Camperas de Cuero</h1>
     <div class="productos">
-    <div class="producto">
-    <img src="./img/blazer beige.png" alt="Blazer de cuerina Beige">
-    <h2>Blazer de cuerina Beige</h2>
-    <p>Blazer de cuerina beige con un toque de elegancia natural, perfecto para agregar estilo y sofisticación a cualquier outfit. Resistente y duradero, ideal para ocasiones informales o formales.</p>
-    <p>$20.000</p>
-    <button class="boton-comprar">Comprar</button>
+        <div class="producto" data-id="12">
+    <img src="./img/campera cuero marron.png" alt="Campera de cuero Marron">
+    <h2>Campera de Cuero Marron</h2>
+    <p>Campera de cuero marrón de alta calidad, diseño clásico y elegante, ideal para outfits casuales o formales. Duradera y sofisticada, perfecta para cualquier ocasión.</p>
+    <p>$45.000</p>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(12)">Comprar</button>
     </div>
-    <div class="producto">
-    <img src="./img/blazer negro.png" alt="Blazer de cuerina Negro">
-    <h2>Blazer de cuerina Negro</h2>
-    <p>Blazer de cuerina negra elegante y sofisticado, perfecto para agregar un toque de estilo a cualquier outfit. Hecho de material de alta calidad, resistente y duradero.</p>
-    <p>$20.000</p>
-    <button class="boton-comprar">Comprar</button>
+        <div class="producto" data-id="13">
+    <img src="./img/campera cuero negra.png" alt="Campera de cuero Negra">
+    <h2>Campera de cuero Negra</h2>
+    <p>Campera de cuero negra elegante y sofisticada, diseño clásico y versátil. Ideal para outfits nocturnos, casuales o formales. Duradera y con estilo atemporal.</p>
+    <p>$45.000</p>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(13)">Comprar</button>
     </div>
-    <div class="producto">
-    <img src="./img/blazer marron.png" alt="Blazer de cuerina Marron">
-    <h2>Blazer de cuerina Marron</h2>
-    <p>Blazer de cuerina marrón con estilo clásico y elegante, ideal para agregar un toque de sofisticación a cualquier outfit. Resistente y duradero, perfecto para ocasiones formales o informales.</p>
-    <p>$20.000</p>
-    <button class="boton-comprar">Comprar</button>
+        <div class="producto" data-id="14">
+    <img src="./img/campera cuero negra con cinturon.jpg" alt="Campera de cuero Negra con cinturon">
+    <h2>Campera de Cuero Negra con cinturon</h2>
+    <p>Campera de cuero negra con cinturón integrado, estilo chic y sofisticado. Detalle de cinturón que acentúa la silueta, perfecta para outfits con personalidad.</p>
+    <p>$50.000</p>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(14)">Comprar</button>
     </div>
 </div>
 
     </main>
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-carrito"></div>
+            <div id="total-carrito">Total: $0.00</div>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="pagar">Pagar</button>
+            </div>
+        </div>
+    </div>
     <p>Web Tienda en-linea</p>
     <footer class="footer">
         <p>¡Contactanos en nuestras redes!</p>
@@ -81,6 +102,7 @@
         </div>
         </div>
     </footer>
+    <script src="js/carrito-compras.js"></script>
 </body>
 
 </html>

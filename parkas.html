@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/carrito-compras.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Parkas</title>
 </head>
@@ -18,18 +19,23 @@
         </div>
         <div class="nav">
         <nav>
-    <ul class="nav-menu">
-        <li><a href="./index.html">Inicio</a></li>
-        <li>
-            <a href="#" class="dropdown-toggle">Productos</a>
-            <ul class="dropdown">
-                <li><a href="./blazer.html">Blazer</a></li> 
-                <li><a href="./parkas.html">Parkas</a></li> 
-                <li><a href="./shores.html">Shores</a></li>
-                <li><a href="./camperas.html">Camperas</a></li> 
-            </ul>
-        </li>
-                <li><a href="./ofertas.html">Ofertas</a></li>
+                <ul class="nav-menu">
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li>
+                        <a href="#" id="icono-carrito" class="carrito-icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contador-carrito" class="contador-carrito">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Productos</a>
+                        <ul class="dropdown">
+                            <li><a href="./blazer.html">Blazer</a></li> 
+                            <li><a href="./parkas.html">Parkas</a></li> 
+                            <li><a href="./shores.html">Shores</a></li>
+                            <li><a href="./camperas.html">Camperas</a></li> 
+                        </ul>
+                    </li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./reseñas.html">Reseñas</a></li>
             </ul>
@@ -37,36 +43,40 @@
         </div>
     </header>
     <main>
-        <div class="titulo1">
+        <div class="titulo">
             <h1>Parkas Abrigadas</h1>
     <div class="productos">
-    <div class="producto">
+    <div class="producto" data-id="4">
     <img src="./img/parka abrigada azul.png" alt="Parka abrigada azul">
     <h2>Parka abrigada azul</h2>
     <p>La Parka abrigada azul es de longitud larga, diseñada para mantener el calor en climas fríos. , un tono suave de azul, le otorga un aspecto fresco y versátil.</p>
     <p>$70.000</p>
-    <button class="boton-comprar">Comprar</button>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(4)">Comprar</button>
     </div>
-    <div class="producto">
+    <div class="producto" data-id="5">
     <img src="./img/parka abrigada verde.png" alt="Parka Abrigada Verde">
     <h2>Parka Abrigada Verde</h2>
     <p>La Parka Verde es la combinación perfecta de abrigo y estilo. Diseñada para brindar máxima protección contra el frío, garantiza calidez y confort absoluto.</p>
     <p>$70.000</p>
-    <button class="boton-comprar">Comprar</button>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(5)">Comprar</button>
     </div>
-    <div class="producto">
+    <div class="producto" data-id="6">
     <img src="./img/parka abrigada negra.png" alt="Parka Abrigada Negra">
     <h2>Parka Abrigada Negra</h2>
     <p>La Parka negra es de longitud larga, diseñada para proteger del frío. Su color negro la hace versátil y fácil de combinar con diferentes outfits.</p>
     <p>$70.000</p>
-    <button class="boton-comprar">Comprar</button>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(6)">Comprar</button>
     </div>
-    <div class="producto">
+    <div class="producto" data-id="7">
     <img src="./img/parka abrigada azul oscuro.png" alt="Parka abrigada Azul oscuro">
     <h2>Parka abrigada Azul oscuro</h2>
     <p>La Parka Azul oscuro es de longitud larga,es una prenda de abrigo funcional y perfecta para proteger del frío y complementar diferentes estilos.garantiza calidez y confort absoluto</p>
     <p>$70.000</p>
-    <button class="boton-comprar">Comprar</button>
+    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
+    <button class="boton-comprar" onclick="agregarAlCarrito(7)">Comprar</button>
     </div>
 </div>
 
@@ -76,8 +86,23 @@
 
 
     </main>
+    
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-carrito"></div>
+            <div id="total-carrito">Total: $0.00</div>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="pagar">Pagar</button>
+            </div>
+        </div>
+    </div>
 
     <a href="./index.html">Volver</a>
+
+    <script src="js/carrito-compras.js"></script> 
 
     <footer class="footer">
         <p>¡Contactanos en nuestras redes!</p>

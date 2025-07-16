@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/carrito-compras.css"> 
+    <link rel="stylesheet" href="carrito-compras.html">
     <link rel="stylesheet" href="./css/estilo.css">
-    <title>Camperas</title>
+    <title>Resumen de la compra</title>
 </head>
+
 <body>
+
     <header>
         <div class="logo"> 
             <img src="./img/logo.png" alt="Logo Tienda - En linea" class="imglogo">
@@ -41,52 +44,55 @@
         </nav>
         </div>
     </header>
-    <main>
-        <div class="titulo">
-            <h1>Camperas de Cuero</h1>
-    <div class="productos">
-        <div class="producto" data-id="12">
-    <img src="./img/campera cuero marron.png" alt="Campera de cuero Marron">
-    <h2>Campera de Cuero Marron</h2>
-    <p>Campera de cuero marrón de alta calidad, diseño clásico y elegante, ideal para outfits casuales o formales. Duradera y sofisticada, perfecta para cualquier ocasión.</p>
-    <p>$45.000</p>
-    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
-    <button class="boton-comprar" onclick="agregarAlCarrito(12)">Comprar</button>
-    </div>
-        <div class="producto" data-id="13">
-    <img src="./img/campera cuero negra.png" alt="Campera de cuero Negra">
-    <h2>Campera de cuero Negra</h2>
-    <p>Campera de cuero negra elegante y sofisticada, diseño clásico y versátil. Ideal para outfits nocturnos, casuales o formales. Duradera y con estilo atemporal.</p>
-    <p>$45.000</p>
-    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
-    <button class="boton-comprar" onclick="agregarAlCarrito(13)">Comprar</button>
-    </div>
-        <div class="producto" data-id="14">
-    <img src="./img/campera cuero negra con cinturon.jpg" alt="Campera de cuero Negra con cinturon">
-    <h2>Campera de Cuero Negra con cinturon</h2>
-    <p>Campera de cuero negra con cinturón integrado, estilo chic y sofisticado. Detalle de cinturón que acentúa la silueta, perfecta para outfits con personalidad.</p>
-    <p>$50.000</p>
-    <input type="number" class="cantidad" value="1" min="1" style="width: 50px;">
-    <button class="boton-comprar" onclick="agregarAlCarrito(14)">Comprar</button>
-    </div>
-</div>
-
+<body>
+    <main class="compra">
+        <h1>Resumen de la compra</h1>
+        <section>
+            <div class="resumen-box">
+                <table id="detalle-productos">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detalle">
+                    </tbody>
+                </table>
+                <div class="resumen-totales">
+                    <div class="total-items">
+                        <span>Artículos totales:</span>
+                        <span id="total-items">0</span>
+                    </div>
+                    <div class="total-pedido">
+                        <span>Total a pagar:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <div id="modal-carrito" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="lista-carrito"></div>
-            <div id="total-carrito">Total: $0.00</div>
-            <div class="botones-carrito">
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-                <button id="pagar">Pagar</button>
-            </div>
-        </div>
-    </div>
-    <a href="./index.html">Volver</a>
-    <script src="js/carrito-compras.js"></script> 
+
+    <form id="formulario" action="https://formspree.io/f/mblodanw" method="POST">
+        <textarea id="carritoData" name="carrito" style="display:none;"></textarea>
+        <textarea id="totalCarrito" name="total" style="display:none;"></textarea>
+        <br>
+        <hr>
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        <label>Email:</label>
+        <input type="email" id="contactoEmail" name="email" placeholder="Correo electrónico" required>
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+        <br><br>
+        <button type="submit" id="botonEnviar">Confirmar Compra</button>
+        <button type="button" id="botonRestablecer">Restablecer</button>
+    </form>
+    
+    <script src="js/carrito-compras.js"></script>
     <footer class="footer">
         <p>¡Contactanos en nuestras redes!</p>
         <div class="footer-container">
@@ -100,5 +106,6 @@
         </div>
         </div>
     </footer>
+    <script src="./js/compra.js"></script>
 </body>
 </html>

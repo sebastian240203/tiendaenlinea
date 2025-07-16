@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/carrito-compras.css">
+    <link rel="stylesheet" href="css/carrito-compras.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Formulario de contacto</title>
 </head>
@@ -17,18 +19,23 @@
         </div>
         <div class="nav">
         <nav>
-    <ul class="nav-menu">
-        <li><a href="./index.html">Inicio</a></li>
-        <li>
-            <a href="#" class="dropdown-toggle">Productos</a>
-            <ul class="dropdown">
-                <li><a href="./blazer.html">Blazer</a></li> 
-                <li><a href="./parkas.html">Parkas</a></li> 
-                <li><a href="./shores.html">Shores</a></li>
-                <li><a href="./camperas.html">Camperas</a></li> 
-            </ul>
-        </li>
-                <li><a href="./ofertas.html">Ofertas</a></li>
+                <ul class="nav-menu">
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li>
+                        <a href="#" id="icono-carrito" class="carrito-icono">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="contador-carrito" class="contador-carrito">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Productos</a>
+                        <ul class="dropdown">
+                            <li><a href="./blazer.html">Blazer</a></li> 
+                            <li><a href="./parkas.html">Parkas</a></li> 
+                            <li><a href="./shores.html">Shores</a></li>
+                            <li><a href="./camperas.html">Camperas</a></li> 
+                        </ul>
+                    </li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./reseñas.html">Reseñas</a></li>
             </ul>
@@ -65,7 +72,22 @@
         </div>
     </div>
 </main>
+
+<div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="lista-carrito"></div>
+            <div id="total-carrito">Total: $0.00</div>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="pagar">Pagar</button>
+            </div>
+        </div>
+    </div>
+
     <a href="./index.html">Volver</a>
+    <script src="js/carrito-compras.js"></script>
     <footer class="footer">
         <p>¡Contactanos en nuestras redes!</p>
         <div class="footer-container">
@@ -79,6 +101,6 @@
         </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
