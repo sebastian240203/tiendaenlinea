@@ -5,51 +5,51 @@ body {
 }
 
 .imglogo {
-    width: 50%; /* Ajusta el tamaño del logo en pantallas grandes */
-    max-width: 300px; /* Establece un ancho máximo */
-    height: auto; /* Mantiene la proporción */
+    width: 50%; 
+    max-width: 300px; 
+    height: auto; 
 }
 
 .titulo h1 {
-    font-size: 3rem; /* Tamaño base para pantallas grandes */
+    font-size: 3rem; 
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .imglogo {
-        width: 60%; /* Aumenta el tamaño del logo en pantallas pequeñas */
-        max-width: 150px; /* Ajusta el ancho máximo */
+        width: 100%; 
+        max-width: 150px; 
     }
 
     .titulo h1 {
-        font-size: 2.5rem; /* Reduce el tamaño del título */
+        font-size: 2.5rem; 
     }
 
     .nav-menu {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos del menú */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .nav-menu > li {
-        width: 100%; /* Cada elemento del menú ocupa el 100% del ancho */
-        text-align: center; /* Centra el texto en los elementos del menú */
+        width: 100%; 
+        text-align: center; 
     }
 }
 
 @media (max-width: 480px) {
     .imglogo {
-        width: 70%; /* Aumenta aún más el tamaño en pantallas muy pequeñas */
-        max-width: 120px; /* Ajusta el ancho máximo */
+        width: 70%; 
+        max-width: 120px; 
     }
 
     .titulo h1 {
-        font-size: 2rem; /* Reduce aún más el tamaño del título */
+        font-size: 2rem; 
     }
 }
 
 .titulo {
     display: flex;
-    background-color: #ff99ff;
+    background-color: #D3D3D3;
     font-weight: 100;
     align-items: center;
     flex-direction: column;
@@ -58,7 +58,7 @@ body {
 
 header { 
     display: flex;
-    background-color: #ff99ff;
+    background-color: #D3D3D3; 
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -67,96 +67,92 @@ header {
     z-index: 20;
 }
 
-/* Estilos para el menú de navegación */
+
 .nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    background-color: #333; /* Color de fondo del menú */
+    background-color: #333; 
 }
 
 .nav-menu > li {
-    position: relative; /* Necesario para el dropdown */
+    position: relative; 
 }
 
 .nav-menu > li > a {
     display: block;
     padding: 15px 20px;
-    color: white; /* Color del texto */
+    color: white; 
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .nav-menu > li > a:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse */
+    background-color: #555; 
 }
 
 .dropdown {
-    display: none; /* Ocultar el dropdown por defecto */
-    position: absolute; /* Posicionar el dropdown */
-    top: 100%; /* Colocar debajo del elemento padre */
+    display: none; 
+    position: absolute; 
+    top: 100%; 
     left: 0;
-    background-color: #444; /* Color de fondo del dropdown */
-    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
-    min-width: 150px; /* Ancho mínimo del dropdown */
+    background-color: #444; 
+    z-index: 1000; 
+    min-width: 150px; 
 }
 
 .dropdown li {
-    border-bottom: 1px solid #555; /* Línea separadora entre elementos */
+    border-bottom: 1px solid #555; 
 }
 
 .dropdown li:last-child {
-    border-bottom: none; /* Sin línea en el último elemento */
+    border-bottom: none; 
 }
 
 .dropdown li a {
-    padding: 10px 15px; /* Espaciado interno de los enlaces del dropdown */
-    color: white; /* Color del texto en el dropdown */
+    padding: 10px 15px; 
+    color: white;
     text-decoration: none;
-    display: block; /* Hacer que el enlace ocupe todo el ancho */
+    display: block; 
 }
 
 .dropdown li a:hover {
-    background-color: #666; /* Color de fondo al pasar el mouse en el dropdown */
+    background-color: #666; 
 }
 
-/* Mostrar el dropdown al pasar el mouse */
+
 .nav-menu > li:hover .dropdown {
-    display: block; /* Mostrar el dropdown */
+    display: block; 
 }
 
-h1 {
-    font-size: 50px;
-}
-
-p {
-    color: deepskyblue;
-}    
 
 .productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; 
+    padding: 20px;
 }
-
+p {
+    color: deepskyblue;
+}    
 .producto {
-    flex: 1 1 200px; /* Permite que el elemento crezca y se reduzca */
+    flex: 1 1 200px; 
     background-color: #f7f7f7;
-    padding: 20px; /* Reduce el padding para que se ajuste mejor */
+    padding: 20px; 
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s; /* Agrega una transición */
+    transition: transform 0.3s;
 }
 
 .producto:hover {
-    transform: scale(1.05); /* Efecto de hover */
+    transform: scale(1.05); 
 }
 
 .producto img {
-    width: 100%; /* Ajusta la imagen al contenedor */
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
@@ -181,97 +177,16 @@ p {
     cursor: pointer;
     font-size: 16px;
 }
-
 .boton-comprar:hover {
     background-color: #3e8e41;
 }
 
 
-.ofertas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espacio entre las ofertas */
-    padding: 20px;
-}
-
-.oferta {
-    flex: 1 1 300px; /* Permite que el elemento crezca y se reduzca */
-    background-color: #f7f7f7;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centra el texto */
-}
-
-.oferta img {
-    width: 100%; /* Ajusta la imagen al contenedor */
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.oferta h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.oferta p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.oferta span {
-    font-size: 14px;
-    color: #ff0000; /* Color para el descuento */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.boton-comprar {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.boton-comprar:hover {
-    background-color: #3e8e41;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .oferta {
-        flex: 1 1 45%; /* Dos ofertas por fila en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    .oferta {
-        flex: 1 1 100%; /* Una oferta por fila en pantallas muy pequeñas */
-    }
-
-    .oferta h2 {
-        font-size: 16px; /* Reduce el tamaño del título */
-    }
-
-    .oferta p, .oferta span {
-        font-size: 12px; /* Reduce el tamaño del texto */
-    }
-
-    .boton-comprar {
-        font-size: 14px; /* Reduce el tamaño del botón */
-    }
-}
 
 .contacto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Espacio entre columnas */
+    gap: 20px; 
     padding: 20px;
 }
 
@@ -306,36 +221,37 @@ p {
 }
 
 .ubicacion-contacto iframe {
-    width: 100%; /* Asegura que el iframe sea responsivo */
-    height: 450px; /* Altura fija */
+    width: 100%; 
+    height: 450px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .contacto {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 
     .ubicacion-contacto iframe {
-        height: 300px; /* Reduce la altura del iframe en pantallas pequeñas */
+        height: 300px; 
     }
 }
 
 @media (max-width: 480px) {
     .formulario-contacto input, .formulario-contacto textarea {
-        font-size: 14px; /* Reduce el tamaño de fuente en pantallas muy pequeñas */
+        font-size: 14px;
     }
 
     .formulario-contacto button {
-        font-size: 14px; /* Reduce el tamaño del botón */
+        font-size: 14px;
     }
 }
 
+
 .reseñas {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas */
-    gap: 20px; /* Espacio entre las reseñas */
-    padding: 20px; /* Espaciado interno */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
 }
 
 .reseña {
@@ -350,14 +266,21 @@ p {
 }
 
 .reseña img {
-    width: 80px; /* Ajusta el tamaño de la imagen */
-    height: 80px; /* Mantiene la proporción */
-    border-radius: 50%; /* Hace que la imagen sea circular */
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
     margin-bottom: 10px;
 }
-
+.reseña h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
 .reseña h2 {
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 5px;
 }
 
@@ -369,54 +292,57 @@ p {
 .reseña span {
     font-size: 14px;
     font-weight: bold;
-    color: #ffd700; /* Color dorado para las estrellas */
+    color: #ffd700; 
 }
 
 .volver {
     display: block;
-    margin: 20px auto; /* Centra el enlace */
+    margin: 20px auto; 
     text-align: center;
-    color: #4CAF50; /* Color del texto */
+    color: #4CAF50;
     text-decoration: none;
     font-size: 16px;
 }
 
 .volver:hover {
-    text-decoration: underline; /* Subraya al pasar el mouse */
+    text-decoration: underline;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .reseñas {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el número de columnas en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .reseña img {
-        width: 60px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+        width: 60px; 
         height: 60px;
     }
-
+    .reseña h1 {
+        font-size: 20px;
+    }
     .reseña h2 {
-        font-size: 14px; /* Reduce el tamaño del título */
+        font-size: 15px; 
     }
 
     .reseña p, .reseña span {
-        font-size: 12px; /* Reduce el tamaño del texto */
+        font-size: 12px; 
     }
 }
 
 @media (max-width: 480px) {
     .reseña {
-        padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+        padding: 15px; 
     }
 
     .volver {
-        font-size: 14px; /* Reduce el tamaño del texto del enlace */
+        font-size: 14px; 
     }
 }
 
+
 .footer {
-    background-color: #ff99ff;
+    background-color: #D3D3D3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,25 +369,24 @@ p {
 /* Media Queries */
 @media (max-width: 768px) {
     .nav-menu {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column; 
     }
 
     .producto {
-        flex: 1 1 100%; /* Cada producto ocupa el 100% en pantallas pequeñas */
+        flex: 1 1 100%; 
     }
 
     .footer-container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column; 
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 30px; /* Reduce el tamaño del título en pantallas muy pequeñas */
+        font-size: 30px; 
     }
 
     .footer-info {
-        font-size: 16px; /* Reduce el tamaño de la información del pie de página */
+        font-size: 16px;
     }
 }
-
