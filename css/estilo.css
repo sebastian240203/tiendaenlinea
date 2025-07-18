@@ -14,46 +14,12 @@ body {
     font-size: 3rem; 
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .imglogo {
-        width: 100%; 
-        max-width: 150px; 
-    }
-
-    .titulo h1 {
-        font-size: 2.5rem; 
-    }
-
-    .nav-menu {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .nav-menu > li {
-        width: 100%; 
-        text-align: center; 
-    }
-}
-
-@media (max-width: 480px) {
-    .imglogo {
-        width: 70%; 
-        max-width: 120px; 
-    }
-
-    .titulo h1 {
-        font-size: 2rem; 
-    }
-}
-
 .titulo {
     display: flex;
     background-color: #D3D3D3;
     font-weight: 100;
     align-items: center;
     flex-direction: column;
-
 }
 
 header { 
@@ -66,7 +32,6 @@ header {
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     z-index: 20;
 }
-
 
 .nav-menu {
     list-style: none;
@@ -90,6 +55,63 @@ header {
 
 .nav-menu > li > a:hover {
     background-color: #555; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .imglogo {
+        width: 100%; 
+        max-width: 150px; 
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem; 
+    }
+
+    .nav-menu {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .nav-menu > li {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .contacto {
+        grid-template-columns: 1fr; 
+    }
+
+    .ubicacion-contacto iframe {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .imglogo {
+        width: 70%; 
+        max-width: 120px; 
+    }
+
+    .titulo h1 {
+        font-size: 2rem; 
+    }
+
+    .formulario-contacto input, .formulario-contacto textarea {
+        font-size: 14px;
+    }
+
+    .formulario-contacto button {
+        font-size: 14px;
+    }
+
+    .reseña {
+        padding: 15px; 
+    }
+
+    .volver {
+        font-size: 14px; 
+    }
 }
 
 .dropdown {
@@ -121,11 +143,9 @@ header {
     background-color: #666; 
 }
 
-
 .nav-menu > li:hover .dropdown {
     display: block; 
 }
-
 
 .productos {
     display: flex;
@@ -134,9 +154,7 @@ header {
     gap: 20px; 
     padding: 20px;
 }
-p {
-    color: deepskyblue;
-}    
+
 .producto {
     flex: 1 1 200px; 
     background-color: #f7f7f7;
@@ -164,6 +182,7 @@ p {
 }
 
 .producto p {
+    color: deepskyblue;
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -177,11 +196,10 @@ p {
     cursor: pointer;
     font-size: 16px;
 }
+
 .boton-comprar:hover {
     background-color: #3e8e41;
 }
-
-
 
 .contacto {
     display: grid;
@@ -189,8 +207,6 @@ p {
     gap: 20px; 
     padding: 20px;
 }
-
-
 
 .info-contacto, .formulario-contacto, .ubicacion-contacto {
     background-color: #f7f7f7;
@@ -225,28 +241,6 @@ p {
     height: 450px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .contacto {
-        grid-template-columns: 1fr; 
-    }
-
-    .ubicacion-contacto iframe {
-        height: 300px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .formulario-contacto input, .formulario-contacto textarea {
-        font-size: 14px;
-    }
-
-    .formulario-contacto button {
-        font-size: 14px;
-    }
-}
-
-
 .reseñas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
@@ -271,6 +265,7 @@ p {
     border-radius: 50%; 
     margin-bottom: 10px;
 }
+
 .reseña h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -279,12 +274,14 @@ p {
     border-bottom: 2px solid;
     padding-bottom: 5px;
 }
+
 .reseña h2 {
     font-size: 25px;
     margin-bottom: 5px;
 }
 
 .reseña p {
+    color: deepskyblue;
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -307,39 +304,6 @@ p {
 .volver:hover {
     text-decoration: underline;
 }
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .reseñas {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    .reseña img {
-        width: 60px; 
-        height: 60px;
-    }
-    .reseña h1 {
-        font-size: 20px;
-    }
-    .reseña h2 {
-        font-size: 15px; 
-    }
-
-    .reseña p, .reseña span {
-        font-size: 12px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .reseña {
-        padding: 15px; 
-    }
-
-    .volver {
-        font-size: 14px; 
-    }
-}
-
 
 .footer {
     background-color: #D3D3D3;
@@ -364,29 +328,4 @@ p {
 
 .footer-info {
     font-size: 20px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column; 
-    }
-
-    .producto {
-        flex: 1 1 100%; 
-    }
-
-    .footer-container {
-        flex-direction: column; 
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 30px; 
-    }
-
-    .footer-info {
-        font-size: 16px;
-    }
 }

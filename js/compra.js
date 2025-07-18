@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById('carritoData').value = detallesCarritoParaEnvio;
         document.getElementById('totalCarrito').value = `$${totalFormateado}`;
-        
-        // Enviar el formulario
         document.getElementById('formulario').submit();
     }
 
@@ -63,11 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (botonRestablecer) {
         botonRestablecer.addEventListener('click', function() {
-            // Restablecer el formulario
             document.getElementById('formulario').reset();
-            detalleDiv.innerHTML = ""; // Limpiar el resumen
-            document.getElementById('total-items').textContent = "0"; // Reiniciar total de artículos
-            document.getElementById('total').textContent = "$0.00"; // Reiniciar total a pagar
+            detalleDiv.innerHTML = ""; 
+            document.getElementById('total-items').textContent = "0"; 
+            document.getElementById('total').textContent = "$0.00"; 
         });
     }
 });

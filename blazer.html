@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo"> 
-            <img src="./img/logo.png" alt="Logo Tienda - En linea" class="imglogo">
+            <img src="./img/logo.webp" alt="Logo Tienda - En linea" class="imglogo">
         </div>
         <div class="titulo">
         <h1 class="h1">Tienda - En linea</h1>
@@ -46,7 +46,7 @@
             <h1>Blazer de Cuerina</h1>
     <div class="productos">
     <div class="producto" data-id="1">
-    <img src="./img/blazer beige.png" alt="Blazer de cuerina Beige">
+    <img src="./img/blazer beige.webp" alt="Blazer de cuerina Beige">
     <h2>Blazer de cuerina Beige</h2>
     <p>Blazer de cuerina beige con un toque de elegancia natural, perfecto para agregar estilo y sofisticación a cualquier outfit. Resistente y duradero, ideal para ocasiones informales o formales.</p>
     <p>$20.000</p>
@@ -54,7 +54,7 @@
     <button class="boton-comprar" onclick="agregarAlCarrito(1)">Comprar</button>
     </div>
     <div class="producto" data-id="2">
-    <img src="./img/blazer negro.png" alt="Blazer de cuerina Negro">
+    <img src="./img/blazer negro.webp" alt="Blazer de cuerina Negro">
     <h2>Blazer de cuerina Negro</h2>
     <p>Blazer de cuerina negra elegante y sofisticado, perfecto para agregar un toque de estilo a cualquier outfit. Hecho de material de alta calidad, resistente y duradero.</p>
     <p>$20.000</p>
@@ -62,7 +62,7 @@
     <button class="boton-comprar" onclick="agregarAlCarrito(2)">Comprar</button>
     </div>
     <div class="producto" data-id="3">
-    <img src="./img/blazer marron.png" alt="Blazer de cuerina Marron">
+    <img src="./img/blazer marron.webp" alt="Blazer de cuerina Marron">
     <h2>Blazer de cuerina Marron</h2>
     <p>Blazer de cuerina marrón con estilo clásico y elegante, ideal para agregar un toque de sofisticación a cualquier outfit. Resistente y duradero, perfecto para ocasiones formales o informales.</p>
     <p>$20.000</p>
@@ -74,17 +74,35 @@
     </main>
 
     <div id="modal-carrito" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="lista-carrito"></div>
-            <div id="total-carrito">Total: $0.00</div>
-            <div class="botones-carrito">
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-                <button id="pagar">Pagar</button>
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Tu Carrito <span id="contador-carrito-modal">(0 productos)</span></h2>
+        <div id="lista-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="items-carrito">
+                </tbody>
+            </table>
+        </div>
+        <div class="carrito-footer">
+            <div id="total-carrito">
+                <span>Total: <strong>$0.00</strong></span>
+            </div>
+            <div class="modal-buttons">
+                <button id="vaciar-carrito" class="btn btn-danger"><i class="fas fa-trash"></i> Vaciar</button>
+                <button id="pagar" class="btn btn-primary">Proceder al pago <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
+</div>
     
     <a href="./index.html">Volver</a>
     <script src="js/carrito-compras.js"></script> 

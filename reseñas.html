@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo"> 
-            <img src="./img/logo.png" alt="Logo Tienda - En linea"
+            <img src="./img/logo.webp" alt="Logo Tienda - En linea"
                     class="imglogo">
         </div>
         <div class="titulo">
@@ -48,31 +48,31 @@
             <h1>Reseñas</h1>
         <div class="reseñas">
     <div class="reseña">
-    <img src="./img/gabriela reseña.png" alt="Foto creada con IA">
+    <img src="./img/gabriela reseña.webp" alt="Foto creada con IA">
     <h2>Gabriela Rodriguez</h2>
     <p>Excelente servicio, muy recomendable!</p>
     <span>5/5 estrellas</span>
     </div>
     <div class="reseña">
-    <img src="./img/claudia reseña.png" alt="Foto creada con IA">
+    <img src="./img/claudia reseña.webp" alt="Foto creada con IA">
     <h2>Claudia Lopez</h2>
     <p>Buen producto, pero tardó un poco en llegar.</p>
     <span>4/5 estrellas</span>
     </div>
     <div class="reseña">
-    <img src="./img/milgros reseña.png" alt="Foto creada con IA">
+    <img src="./img/milgros-reseña.webp" alt="Foto creada con IA">
     <h2>Milagros Fernandez</h2>
     <p>Me encantó la calidad del producto!</p>
     <span>5/5 estrellas</span>
     </div>
     <div class="reseña">
-    <img src="./img/Monica reseña.png" alt="Foto creada con IA">
+    <img src="./img/Monica-reseña.webp" alt="Foto creada con IA">
     <h2>Monica Garcia</h2>
     <p>Un poco caro, pero vale la pena.</p>
     <span>4/5 estrellas</span>
     </div>
     <div class="reseña">
-    <img src="./img/leila reseña.png" alt="Foto creada con IA">
+    <img src="./img/leila reseña.webp" alt="Foto creada con IA">
     <h2>Leila Gonzalez</h2>
     <p>Excelente atención al cliente!</p>
     <span>5/5 estrellas</span>
@@ -83,24 +83,41 @@
     <h1>Clientes satisfechos</h1>
         <div class="container my-4 text-center"></div>
         <div class="mt-2" id="contenido">
-            <!--Contenido recuperado con Fetch -->
         </div>
         <button class="btn-danger" onclick="traer()">Siguiente</button>
     </section>
 </main>
 
 <div id="modal-carrito" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="lista-carrito"></div>
-            <div id="total-carrito">Total: $0.00</div>
-            <div class="botones-carrito">
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-                <button id="pagar">Pagar</button>
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Tu Carrito <span id="contador-carrito-modal">(0 productos)</span></h2>
+        <div id="lista-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="items-carrito">
+                </tbody>
+            </table>
+        </div>
+        <div class="carrito-footer">
+            <div id="total-carrito">
+                <span>Total: <strong>$0.00</strong></span>
+            </div>
+            <div class="modal-buttons">
+                <button id="vaciar-carrito" class="btn btn-danger"><i class="fas fa-trash"></i> Vaciar</button>
+                <button id="pagar" class="btn btn-primary">Proceder al pago <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
+</div>
 
 <a href="./index.html">Volver</a>
 
@@ -120,6 +137,6 @@
         </div>
     </footer>
     <script src="./js/resenia.js"></script> 
-
+    <script src="js/compra.js"></script>
 </body>
 </html>

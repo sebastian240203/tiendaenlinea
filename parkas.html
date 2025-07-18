@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo"> 
-            <img src="./img/logo.png" alt="Logo Tienda - En linea"
+            <img src="./img/logo.webp" alt="Logo Tienda - En linea"
                     class="imglogo">
         </div>
         <div class="titulo">
@@ -47,7 +47,7 @@
             <h1>Parkas Abrigadas</h1>
     <div class="productos">
     <div class="producto" data-id="4">
-    <img src="./img/parka abrigada azul.png" alt="Parka abrigada azul">
+    <img src="./img/parka-abrigada-azul.webp" alt="Parka abrigada azul">
     <h2>Parka abrigada azul</h2>
     <p>La Parka abrigada azul es de longitud larga, diseñada para mantener el calor en climas fríos. , un tono suave de azul, le otorga un aspecto fresco y versátil.</p>
     <p>$70.000</p>
@@ -55,7 +55,7 @@
     <button class="boton-comprar" onclick="agregarAlCarrito(4)">Comprar</button>
     </div>
     <div class="producto" data-id="5">
-    <img src="./img/parka abrigada verde.png" alt="Parka Abrigada Verde">
+    <img src="./img/parka-abrigada-verde.webp" alt="Parka Abrigada Verde">
     <h2>Parka Abrigada Verde</h2>
     <p>La Parka Verde es la combinación perfecta de abrigo y estilo. Diseñada para brindar máxima protección contra el frío, garantiza calidez y confort absoluto.</p>
     <p>$70.000</p>
@@ -63,7 +63,7 @@
     <button class="boton-comprar" onclick="agregarAlCarrito(5)">Comprar</button>
     </div>
     <div class="producto" data-id="6">
-    <img src="./img/parka abrigada negra.png" alt="Parka Abrigada Negra">
+    <img src="./img/parka-abrigada-negra.webp" alt="Parka Abrigada Negra">
     <h2>Parka Abrigada Negra</h2>
     <p>La Parka negra es de longitud larga, diseñada para proteger del frío. Su color negro la hace versátil y fácil de combinar con diferentes outfits.</p>
     <p>$70.000</p>
@@ -71,7 +71,7 @@
     <button class="boton-comprar" onclick="agregarAlCarrito(6)">Comprar</button>
     </div>
     <div class="producto" data-id="7">
-    <img src="./img/parka abrigada azul oscuro.png" alt="Parka abrigada Azul oscuro">
+    <img src="./img/parka-abrigada-azul-oscuro.webp" alt="Parka abrigada Azul oscuro">
     <h2>Parka abrigada Azul oscuro</h2>
     <p>La Parka Azul oscuro es de longitud larga,es una prenda de abrigo funcional y perfecta para proteger del frío y complementar diferentes estilos.garantiza calidez y confort absoluto</p>
     <p>$70.000</p>
@@ -88,17 +88,35 @@
     </main>
     
     <div id="modal-carrito" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="lista-carrito"></div>
-            <div id="total-carrito">Total: $0.00</div>
-            <div class="botones-carrito">
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-                <button id="pagar">Pagar</button>
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Tu Carrito <span id="contador-carrito-modal">(0 productos)</span></h2>
+        <div id="lista-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="items-carrito">
+                </tbody>
+            </table>
+        </div>
+        <div class="carrito-footer">
+            <div id="total-carrito">
+                <span>Total: <strong>$0.00</strong></span>
+            </div>
+            <div class="modal-buttons">
+                <button id="vaciar-carrito" class="btn btn-danger"><i class="fas fa-trash"></i> Vaciar</button>
+                <button id="pagar" class="btn btn-primary">Proceder al pago <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
+</div>
 
     <a href="./index.html">Volver</a>
 
