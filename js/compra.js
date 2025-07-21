@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productos = JSON.parse(sessionStorage.getItem('productos')) || [];
     const total = sessionStorage.getItem('total') || 0;
     const totalNumerico = parseFloat(total) || 0;
-    const totalFormateado = totalNumerico.toFixed(3);
+    const totalFormateado = totalNumerico.toFixed(0);
 
     const detalleDiv = document.getElementById("detalle");
     let resumenHTML = "";
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         resumenHTML += `
             <tr>
                 <td>${producto.nombre}</td>
-                <td>$${producto.precio.toFixed(3)}</td>
+                <td>$${producto.precio.toFixed(0)}</td>
                 <td>${producto.cantidad}</td>
-                <td>$${subtotal.toFixed(3)}</td>
+                <td>$${subtotal.toFixed(0)}</td>
             </tr>
         `;
         cantidadTotal += producto.cantidad;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     detalleDiv.innerHTML = resumenHTML;
     document.getElementById('total-items').textContent = cantidadTotal;
-    document.getElementById('total').textContent = `$${totalGeneral.toFixed(3)}`;
+    document.getElementById('total').textContent = `$${totalGeneral.toFixed(0)}`;
 
     function enviarFormulario(event) {
         event.preventDefault();
@@ -62,9 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (botonRestablecer) {
         botonRestablecer.addEventListener('click', function() {
             document.getElementById('formulario').reset();
-            detalleDiv.innerHTML = ""; 
-            document.getElementById('total-items').textContent = "0"; 
-            document.getElementById('total').textContent = "$0.00"; 
         });
     }
 });

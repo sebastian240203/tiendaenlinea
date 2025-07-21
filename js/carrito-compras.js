@@ -40,13 +40,13 @@ function mostrarModalCarrito() {
             const itemCarrito = document.createElement("tr");
             itemCarrito.innerHTML = `
                 <td><strong>${producto.title}</strong></td>
-                <td>$${producto.price.toFixed(3)}</td>
+                <td>$${producto.price.toFixed(0)}</td>
                 <td class="cantidad-control">
                     <button onclick="cambiarCantidad(${item.id}, -1)">-</button>
                     <input type="number" value="${item.cantidad}" min="1" readonly>
                     <button onclick="cambiarCantidad(${item.id}, 1)">+</button>
                 </td>
-                <td>$${subtotal.toFixed(3)}</td> 
+                <td>$${subtotal.toFixed(0)}</td> 
                 <td>
                     <button class="eliminar-item" onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
                 </td>
@@ -159,7 +159,7 @@ function pagar() {
 
 
     sessionStorage.setItem('productos', JSON.stringify(productosCompra));
-    sessionStorage.setItem('total', totalCompra.toFixed(3));
+    sessionStorage.setItem('total', totalCompra.toFixed(0));
 
 
     window.location.href = 'compra.html';
